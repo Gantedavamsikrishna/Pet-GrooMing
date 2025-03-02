@@ -1,25 +1,36 @@
+// count JS
 document.addEventListener("DOMContentLoaded", function () {
   function animateCounters() {
     const counters = document.querySelectorAll(".card-title");
-    const duration = 2000;
+    const duration = 2000; 
 
     counters.forEach((counter) => {
-      let target = parseInt(counter.getAttribute("data-target"));
-      let start = 1;
-      let increment = Math.ceil(target / (duration / 10));
-
+      let target = parseInt(counter.getAttribute("data-target"), 10);
+      let start = 0;
+      let increment = target / (duration / 50); 
       let interval = setInterval(() => {
         start += increment;
         if (start >= target) {
-          start = target;
+          counter.innerText = target; 
           clearInterval(interval);
+        } else {
+          counter.innerText = Math.floor(start); 
         }
-        counter.innerText = start;
       }, 50);
     });
   }
 
-  animateCounters();
+  
+  function handleScroll() {
+    const section = document.querySelector(".con4"); 
+    if (section && section.getBoundingClientRect().top < window.innerHeight) {
+      animateCounters();
+      window.removeEventListener("scroll", handleScroll); 
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); 
 });
 
 // dash board js
