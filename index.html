@@ -15,7 +15,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="home.css" />
-    <script src="Home.js"></script>
   </head>
 
   <body>
@@ -227,7 +226,6 @@
       </div>
     </div>
 
-    <script src="./Count.js"></script>
     <!-- Button trigger modal -->
 
     <!-- Modal -->
@@ -420,7 +418,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="bookingForm">
               <div class="text-center mb-4">
                 <img
                   src="./Images/logo.png"
@@ -596,6 +594,8 @@
       </div>
     </div>
     <!-- Bootstrap JS and dependencies -->
+    <!-- <script src="get.js"></script> -->
+    <script src="Home.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -603,7 +603,7 @@
       function handleLogin() {
         const userType = document.getElementById("userType").value;
         if (userType === "Admin") {
-          window.location.href = "admin-module.html";
+          window.location.href = "Admin.html";
         } else {
           alert("Invalid login type");
         }
