@@ -16,7 +16,7 @@ This project includes a beautiful landing page and a full **appointment booking 
 
 
 ### 🏠 Landing Page  
-![Groomax Landing Page](../Images/image.png)
+![Groomax Landing Page](./Images/image.png)
 
 
 ---
